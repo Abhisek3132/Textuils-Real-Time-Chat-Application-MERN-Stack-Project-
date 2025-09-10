@@ -1,0 +1,129 @@
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.is-typing {
+         margin-top: 90px;
+         width: 85px;
+         justify-content: space-around;
+         display: flex;
+      }
+
+      .jump1,
+      .jump2,
+      .jump3,
+      .jump4,
+      .jump5 {
+         width: 10px;
+         height: 10px;
+         border-radius: 100%;
+         background-color: gray;
+      }
+
+      .jump1 {
+         animation: typing 1.5s linear infinite;
+         animation-delay: 01.1s;
+      }
+
+      .jump2 {
+         animation: typing 1.5s linear infinite;
+         animation-delay: 01.2s;
+      }
+
+      .jump3 {
+         animation: typing 1.5s linear infinite;
+         animation-delay: 01.3s;
+      }
+
+      .jump4 {
+         animation: typing 1.5s linear infinite;
+         animation-delay: 01.4s;
+      }
+
+      .jump5 {
+         animation: typing 1.5s linear infinite;
+         animation-delay: 1.5s;
+      }
+
+    @keyframes typing {
+     0% {
+        transform: translateY(0px);
+     }
+
+     25% {
+        transform: translateY(0px);
+     }
+
+     35% {
+        transform: translateY(15px);
+     }
+
+     45% {
+        transform: translateY(0px);
+     }
+
+     60% {
+        transform: translateY(-15px);
+     }
+
+     75% {
+          background-color: white;
+        transform: translateY(0px);
+     }
+
+     100% {
+        transform: translateY(0px);
+     }
+  }
+
+  /* ...existing code ... */
+
+/* CSS variables for themes */
+:root{
+  --bg-gradient: linear-gradient(90deg,#c7e2e7 0%, #b2d5de 50%, #85cad0 100%);
+  --panel-bg: rgba(255, 255, 255, 0.537);
+  --text-color: #0f172a;
+  --muted: #6b7280;
+}
+
+[data-theme="night"]{
+  --bg-gradient: linear-gradient(90deg,#071023 0%, #072937 50%, #032028 100%);
+  --panel-bg: rgba(10,14,20,0.6);
+  --text-color: #004498;
+  --muted: #636c77;
+}
+
+/* apply to the app root */
+.app-container{
+  min-height:100vh;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+}
+
+/* helper overrides so existing classes pick up theme vars */
+.bg-white { background-color: var(--panel-bg) !important; color: var(--text-color) !important; }
+.text-gray-500 { color: var(--muted) !important; }
+
+/* style the theme toggle button */
+.theme-toggle{
+  backdrop-filter: blur(3px);
+}
+
+/* ...existing css ... */
